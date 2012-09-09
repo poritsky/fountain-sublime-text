@@ -14,5 +14,7 @@
 	"auto_match_enabled": true,
     "indent_subsequent_lines": false,
     "trim_automatic_white_space": true,
-    "line_numbers": false
+    "line_numbers": false,
+    "auto_complete": true
+
 }
