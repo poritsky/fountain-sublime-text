@@ -5,3 +5,7 @@ This is an attempt to get the [Fountain](http://fountain.io) screenwriting synta
 Initial work on `Fountain.tmlanguage` created by Sublime Text forum use "nick" in [this post](http://www.sublimetext.com/forum/viewtopic.php?f=2&t=7442&p=31660).
 
 More info to come.
+
+### Screenshot ###
+
+![Sample Image](img/sample.jpg)
