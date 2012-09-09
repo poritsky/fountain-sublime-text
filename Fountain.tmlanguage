@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>fileTypes</key>
+   <array>
+      <string>fountain</string>
+   </array>
+
+   <key>firstLineMatch</key>
+   <string>^[A-Z]+$</string>
+
+   <key>foldingStartMarker</key>
+   <string>^\s+</string>
+
+   <key>foldingStopMarker</key>
+   <string>^$</string>
+
+   <key>name</key>
+   <string>Fountain</string>
+
+   <key>scopeName</key>
+   <string>text.fountain</string>
+   
+   <key>uuid</key>
+   <string>BA0B1FEB-1E9C-4283-8F3B-E80E7879EA91</string>
+
+   /* Syntax Patterns
+    * ================================== */
+   <key>patterns</key>
+   <array>
+
+      /* Boneyard (comments) */
+      <dict>
+         <key>include</key>
+         <string>#comments</string>
+      </dict>
+
+      /* Title Page */
+      <dict>
+         <key>include</key>
+         <string>#title_page</string>
+      </dict>
+
+      /* Scene Headings */
+      <dict>
+         <key>include</key>
+         <string>#scene_headings</string>
+      </dict>
+
+      /* Sections and synopses */
+      <dict>
+         <key>include</key>
+         <string>#sections</string>
+      </dict>
+
+      /* Transitions */
+      <dict>
+         <key>include</key>
+         <string>#transitions</string>
+      </dict>
+
+      /* Dialogue */
+      <dict>
+         <key>include</key>
+         <string>#dialogue</string>
+      </dict>
+
+      /* Characters */
+      <dict>
+         <key>include</key>
+         <string>#characters</string>
+      </dict>
+
+      /* Text markup (centered, bold, italic, underline) */
+      <dict>
+         <key>include</key>
+         <string>#markup</string>
+      </dict>
+
+      /* Notes */
+      <dict>
+         <key>include</key>
+         <string>#notes</string>
+      </dict>
+
+      /* Pagebreak */
+      <dict>
+         <key>include</key>
+         <string>#pagebreaks</string>
+      </dict>
+
+      /* Action (default) */
+      <dict>
+         <key>include</key>
+         <string>#action</string>
+      </dict>
+
+   </array>
+
+
+
+
+
+   /* Repository
+   * ================================== */
+
+   <key>repository</key>
+
+   <dict>
+
+      /* Action */
+      <key>action</key>
+      <dict>
+         <key>begin</key>
+         <string>^([ \t]*)(?=\S)</string>
+         <key>contentName</key>
+         <string>meta.paragraph.text</string>
+         <key>end</key>
+         <string>^(?!\1(?=\S))</string>
+         <key>patterns</key>
+         <array>
+            <dict>
+               <key>match</key>
+               <string>(?x)
+                  ( (https?|s?ftp|ftps|file|smb|afp|nfs|(x-)?man|gopher|txmt)://|mailto:)
+                  [-:@a-zA-Z0-9_.,~%+/?=&amp;#]+(?&lt;![.,?:])
+               </string>
+               <key>name</key>
+               <string>markup.underline.link.text</string>
+            </dict>
+         </array>
+      </dict>
+
+      /* Boneyard (comments) */
+      <key>comments</key>
+      <dict>
+         <key>name</key>
+         <string>comment.block.fountain</string>
+         <key>begin</key>
+         <string>/\*</string>
+         <key>end</key>
+         <string>\*/</string>
+      </dict>
+
+
+      /* Characters */
+      <key>characters</key>
+      <dict>
+         <key>name</key>
+         <string>entity.name.character.fountain</string>
+         <key>match</key>
+         <string>\n.[A-Z ().\-][A-Z0-9 ().\-]+</string>
+      </dict>
+
+
+      /* Dialogue */
+      <key>dialogue</key>
+      <dict>
+         <key>contentName</key>
+         <string>string.other.dialogue.fountain</string>
+         <key>begin</key>
+         <string>([A-Z ().\-][A-Z0-9 ().\-]+(\s*\^)?$)</string>
+         <key>end</key>
+         <string>^$</string>
+         <key>beginCaptures</key>
+         <dict>
+            <key>1</key>
+            <dict>
+               <key>name</key>
+               <string>entity.name.character.fountain</string>
+            </dict>
+         </dict>
+         <key>applyEndPatternLast</key>
+         <integer>1</integer>
+         <key>patterns</key>
+         <array>
+            <dict>
+               <key>name</key>
+               <string>comment.block.fountain</string>
+               <key>begin</key>
+               <string>/\*</string>
+               <key>end</key>
+               <string>\*/</string>
+            </dict>
+            <dict>
+               <key>name</key>
+               <string>string.other.dialogue.parenthetical.fountain</string>
+               <key>match</key>
+               <string>^\(.*\)$</string>
+               <key>patterns</key>
+               <array>
+                  <dict>
+                     <key>include</key>
+                     <string>#nested_parens</string>
+                  </dict>
+               </array>
+            </dict>
+         </array>
+      </dict>
+
+
+      /* Nested parens */
+      <key>nested_parens</key>
+      <dict>
+         <key>begin</key>
+         <string>(</string>
+         <key>end</key>
+         <string>)</string>
+         <key>patterns</key>
+         <array>
+            <dict>
+               <key>include</key>
+               <string>#nested_parens</string>
+            </dict>
+         </array>
+      </dict>
+
+
+      /* Notes */
+      <key>notes</key>
+      <dict>
+         <key>name</key>
+         <string>entity.other.note.fountain</string>
+         <key>begin</key>
+         <string>\[\[</string>
+         <key>end</key>
+         <string>(^$|\]\])</string>
+      </dict>
+
+
+      /* Pagebreak */
+      <key>pagebreaks</key>
+      <dict>
+         <key>name</key>
+         <string>entity.other.pagebreak.fountain</string>
+         <key>match</key>
+         <string>===(=+)?</string>
+      </dict>
+
+
+      /* Scene Headings */
+      <key>scene_headings</key>
+      <dict>
+         <key>match</key>
+         <string>^\s*(\..*?|(?:INT|EXT|EST|INT\./EXT|INT/EXT|I/E)(?:\.| ))(.*?)(?&lt;!  )(#[A-Za-z0-9\-.]+#)?$</string>
+         <key>captures</key>
+         <dict>
+            <key>1</key>
+            <dict>
+               <key>name</key>
+               <string>keyword.other.heading.scene.fountain</string>
+            </dict>
+            <key>2</key>
+            <dict>
+               <key>name</key>
+               <string>entity.name.heading.scene.fountain</string>
+            </dict>
+            <key>3</key>
+            <dict>
+               <key>name</key>
+               <string>constant.numeric.scene.fountain</string>
+            </dict>
+         </dict>
+      </dict>
+
+
+      /* Sections and synopses */
+      <key>sections</key>
+      <dict>
+         <key>patterns</key>
+         <array>
+            <dict>
+               <key>name</key>
+               <string>entity.name.section.fountain</string>
+               <key>match</key>
+               <string>^#.*$</string>
+            </dict>
+
+            <dict>
+               <key>name</key>
+               <string>entity.name.synopsis.fountain</string>
+               <key>match</key>
+               <string>^=.*$</string>
+            </dict>
+         </array>
+      </dict>
+
+
+      /* Text markup */
+      <key>markup</key>
+      <dict>
+         <key>patterns</key>
+         <array>
+            <dict>
+               <key>name</key>
+               <string>markup.centered.fountain</string>
+               <key>begin</key>
+               <string>^\s*&gt;(?=.*&lt;)</string>
+               <key>end</key>
+               <string>&lt;$</string>
+               <key>patterns</key>
+               <array>
+                  <dict>
+                     <key>include</key>
+                     <string>#markup</string>
+                  </dict>
+               </array>
+            </dict>
+
+            <dict>
+               <key>name</key>
+               <string>markup.underline.fountain</string>
+               <key>begin</key>
+               <string>_(?=.*_)</string>
+               <key>end</key>
+               <string>_</string>
+               <key>patterns</key>
+               <array>
+                  <dict>
+                     <key>include</key>
+                     <string>#markup</string>
+                  </dict>
+               </array>
+            </dict>
+
+            <dict>
+               <key>name</key>
+               <string>markup.bold.fountain</string>
+               <key>begin</key>
+               <string>\*\*(?=.*(?&lt;!\\)\*\*)</string>
+               <key>end</key>
+               <string>\*\*</string>
+               <key>patterns</key>
+               <array>
+                  <dict>
+                     <key>include</key>
+                     <string>#markup</string>
+                  </dict>
+               </array>
+            </dict>
+
+            <dict>
+               <key>name</key>
+               <string>markup.italic.fountain</string>
+               <key>begin</key>
+               <string>(?&lt;!\\)\*(?=(?&lt;!\\)\*)</string>
+               <key>end</key>
+               <string>(?&lt;! |\\)\*</string>
+               <key>patterns</key>
+               <array>
+                  <dict>
+                     <key>include</key>
+                     <string>#markup</string>
+                  </dict>
+               </array>
+            </dict>
+         </array>
+      </dict>
+
+
+      /* Title Page */
+      <key>title_page</key>
+      <dict>
+         <key>begin</key>
+         <string>^(?i)(title|credit|authors?|source|draft date|contact):</string>
+         <key>end</key>
+         <string>^(?=(?i)(title|credit|authors?|source|draft date|contact)|$)</string>
+         <key>beginCaptures</key>
+         <dict>
+            <key>1</key>
+            <dict>
+               <key>name</key>
+               <string>keyword.other.title-page.fountain</string>
+            </dict>
+         </dict>
+         <key>patterns</key>
+         <array>
+            <dict>
+               <key>name</key>
+               <string>string.other.title-page.fountain</string>
+               <key>match</key>
+               <string>((?&lt;=:)|\s+).*$</string>
+            </dict>
+         </array>
+      </dict>
+
+
+      /* Transitions */
+      <key>transitions</key>
+      <dict>
+         <key>name</key>
+         <string>entity.other.transition.fountain</string>
+         <key>match</key>
+         <string>^\s*(&gt;.*|[A-Z ]+ TO:)$</string>
+      </dict>
+   </dict>
+
+</dict>
+</plist>

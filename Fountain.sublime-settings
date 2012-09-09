@@ -1,0 +1,18 @@
+{
+	"extensions":
+	[
+	"fountain"
+	],
+	"font_face": "Courier Final Draft",
+	// "font_face": "Courier New",
+	// "font_face": "Courier",
+	"color_scheme": "Packages/Fountain/Fountain Classic.tmTheme",
+	"word_wrap": true,
+	"wrap_width": 70,
+	"line_padding_top": 5,
+	"draw_centered": true,
+	"auto_match_enabled": true,
+    "indent_subsequent_lines": false,
+    "trim_automatic_white_space": true,
+    "line_numbers": false
+}
