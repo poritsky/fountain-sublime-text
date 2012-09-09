@@ -243,7 +243,7 @@
       <key>scene_headings</key>
       <dict>
          <key>match</key>
-         <string>^\s*(\..*?|(?:INT|EXT|EST|INT\./EXT|INT/EXT|I/E)(?:\.| ))(.*?)(?&lt;!  )(#[A-Za-z0-9\-.]+#)?$</string>
+         <string>^\s*(\..*?|(?:INT|int|EXT|ext|EST|est|INT|int\./EXT|ext|INT|int/EXT|ext|I/E|i/e)(?:\.| ))(.*?)(?&lt;!  )(#[A-Za-z0-9\-.]+#)?$</string>
          <key>captures</key>
          <dict>
             <key>1</key>

@@ -6,6 +6,7 @@
 	"font_face": "Courier Final Draft",
 	// "font_face": "Courier New",
 	// "font_face": "Courier",
+	"font_size": 15,
 	"color_scheme": "Packages/Fountain/Fountain Classic.tmTheme",
 	"word_wrap": true,
 	"wrap_width": 70,
