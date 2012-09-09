@@ -8,4 +8,6 @@ More info to come.
 
 ### Screenshot ###
 
-![Sample Image](img/sample.jpg)
+![Sample Image][img]
+
+[img]: https://raw.github.com/poritsky/fountain-sublime-text/master/img/sample.jpg
