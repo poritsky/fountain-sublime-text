@@ -53,6 +53,32 @@
         </dict>
         <dict>
             <key>name</key>
+            <string>Sections</string>
+            <key>scope</key>
+            <string>entity.name.section.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#787878</string>
+                <key>fontStyle</key>
+                <string>Bold</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Sections</string>
+            <key>scope</key>
+            <string>entity.name.synopsis.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#787878</string>
+                <key>fontStyle</key>
+                <string>Bold</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
             <string>Scene Headings</string>
             <key>scope</key>
             <string>keyword.other.heading.scene.fountain, entity.name.heading.scene.fountain</string>
@@ -93,6 +119,30 @@
             <dict>
                 <key>foreground</key>
                 <string>#036A07</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Notes</string>
+            <key>scope</key>
+            <string>entity.other.note.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>background</key>
+                <string>#FBF6D0</string>
+                <key>foreground</key>
+                <string>#787878</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Boneyard</string>
+            <key>scope</key>
+            <string>comment.block.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#E00000</string>
             </dict>
         </dict>
         <dict>

@@ -20,7 +20,7 @@
    <string>Fountain</string>
 
    <key>scopeName</key>
-   <string>text.fountain</string>
+   <string>text.source.fountain</string>
    
    <key>uuid</key>
    <string>BA0B1FEB-1E9C-4283-8F3B-E80E7879EA91</string>

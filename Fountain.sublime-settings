@@ -15,5 +15,7 @@
     "indent_subsequent_lines": false,
     "trim_automatic_white_space": true,
     "line_numbers": false,
-    "translate_tabs_to_spaces": true
+    "translate_tabs_to_spaces": true,
+    "auto_complete_commit_on_tab": true,
+    "auto_complete_with_fields": true
 }
