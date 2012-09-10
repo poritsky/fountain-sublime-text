@@ -12,11 +12,8 @@
 	"wrap_width": 70,
 	"line_padding_top": 5,
 	"draw_centered": true,
-	"auto_match_enabled": true,
     "indent_subsequent_lines": false,
     "trim_automatic_white_space": true,
     "line_numbers": false,
-    "auto_complete": true,
     "translate_tabs_to_spaces": true
-
 }

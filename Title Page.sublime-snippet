@@ -1,13 +1,14 @@
 <snippet>
 	<content><![CDATA[
 Title: 
-	_**$1**_
-Credit: $2
-Author: $3
-Source: $4
-Draft date: $5
+	_**${1:Script Title}**_
+Credit: ${2:Written By}
+Author: ${3:Full Name}
+Source: ${4:Story By ?}
+Draft date: ${5:Date}
 Contact:
-	$6
+	${6:Address
+	Phone}
 ]]></content>
 	<tabTrigger>fountain</tabTrigger>
 	<scope>text.fountain</scope>
