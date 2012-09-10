@@ -42,7 +42,7 @@ In general Color Schemes will need to be customized with Fountain specific scope
 
 ## What Doesn't Work? ##
 
-The Fountain syntax supports indentations, but this theme doesn't. If you, for example, tab indent characters and dialogue, they will not be highlighted. This has no effect when converting your document with other software, such as [Highland](http://quoteunquoteapps.com/highland/).
+The Fountain syntax supports indentations, but this theme does not support tab-indented character lines. (Space indents work fine, and `Fountain.sublime-settings` contains a line turning tabs to spaces.) If you, for example, tab indent characters and dialogue, they will not be highlighted. This has no effect when converting your document with other software, such as [Highland](http://quoteunquoteapps.com/highland/).
 
 ## Help, Please ##
 
@@ -52,7 +52,7 @@ I spent about a day playing around with this to get the ball rolling, and I will
 
 ![Sample Image][img]
 
-[img]: https://raw.github.com/poritsky/fountain-sublime-text/master/img/sample.jpg
+[img]: https://raw.github.com/poritsky/fountain-sublime-text/master/img/sample.png
 
 ## Thanks ##
 
