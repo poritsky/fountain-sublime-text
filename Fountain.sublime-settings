@@ -16,6 +16,7 @@
     "indent_subsequent_lines": false,
     "trim_automatic_white_space": true,
     "line_numbers": false,
-    "auto_complete": true
+    "auto_complete": true,
+    "translate_tabs_to_spaces": true
 
 }
