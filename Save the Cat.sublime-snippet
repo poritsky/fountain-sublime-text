@@ -1,0 +1,40 @@
+<snippet>
+	<content><![CDATA[
+# Act I
+
+$1
+
+## Setup (1-10)
+
+### Opening Image (1)
+
+### Theme Stated (5)
+
+## Catalyst (12)
+
+## Debate (12-25)
+
+# Act II (25)
+
+## B Story (30)
+
+## Fun and Games (30-55)
+
+# Midpoint (55)
+
+## Bad Guys Close In (50-75)
+
+## All is Lost (75)
+
+## Dark Night of the Soul (75-85)
+
+# Act III (85)
+
+## Final (85-100)
+
+## Final Image (110)
+
+]]></content>
+	<tabTrigger>fountain</tabTrigger>
+	<scope>text.fountain</scope>
+</snippet>
