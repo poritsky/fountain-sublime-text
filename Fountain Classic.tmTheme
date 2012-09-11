@@ -61,7 +61,7 @@
                 <key>foreground</key>
                 <string>#787878</string>
                 <key>fontStyle</key>
-                <string>Bold</string>
+                <string>bold</string>
             </dict>
         </dict>
         <dict>
@@ -74,7 +74,7 @@
                 <key>foreground</key>
                 <string>#787878</string>
                 <key>fontStyle</key>
-                <string>Bold</string>
+                <string>bold</string>
             </dict>
         </dict>
         <dict>
@@ -149,11 +149,33 @@
             <key>name</key>
             <string>Markdown Bold Text</string>
             <key>scope</key>
-            <string>markup.bold.markdown</string>
+            <string>markup.bold.markdown, markup.bold.fountain</string>
             <key>settings</key>
             <dict>
                 <key>fontStyle</key>
                 <string>bold</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Italic Text</string>
+            <key>scope</key>
+            <string>markup.italic.fountain, markup.italic.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>italic</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Underline Text</string>
+            <key>scope</key>
+            <string>markup.underline.fountain, markup.underline.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>underline</string>
             </dict>
         </dict>
 		<dict>
