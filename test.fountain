@@ -1,0 +1,80 @@
+Title: The Beginning
+Credit: written by
+Author: Matt McCray
+Source: based on nothing, per se
+Copyright: (c) 2003 Columbia Pictures
+Notes:
+  This is a test document. So it's pretty nonsensical.
+
+====
+
+# It Begins
+
+EXT. City at Night.
+
+/* Flat style dialog */
+
+SALLY isn't ready for this.
+
+SALLY
+I'm not ready for this.
+
+She moves to the window. *italic* _underline_ **bold**
+
+SALLY
+(wistfully)
+I wonder if it'll rain?
+
+CUT TO:
+
+====
+
+# Comic Test (This is a Section marker. It doesn't show in output)
+
+/* Indented dialog style */
+
+.Page One
+
+Panel 1 - Wideshot of the suburbs
+
+      CAPTION
+  Outside the city, the burbs are waiting. *eh*
+
+Panel 2 - Close up of a single house, the garage door open.
+
+      CAPTION
+  A regular house, containing a regular family. [[Notes]]
+
+      CAPTION
+    (connected)
+  Whatever *that* means.
+
+====
+
+.Page One
+
+> Panel 1
+
+Establishing shot. [[ Of what? (inline note) ]]
+
+> Panel 2
+
+[[ How about using transitions for panels? Uh, I think not. ]]
+
+====
+
+/*
+  Multi-line comment.
+*/
+
+# New Scene (should show up in token list (cmd/ctrl+r))
+= Something fun here (this is a Synopsis, also doesn't show in output)
+
+.Panel #1#
+
+The stuff we all need and love. /* inline comment? */
+
+[[Multi-
+  
+line notes]]
+
