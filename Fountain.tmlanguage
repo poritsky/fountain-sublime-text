@@ -129,6 +129,10 @@
                <key>name</key>
                <string>markup.underline.link.text</string>
             </dict>
+            <dict>
+               <key>include</key>
+               <string>#markup</string>
+            </dict>
          </array>
       </dict>
 
@@ -187,7 +191,7 @@
                <key>name</key>
                <string>string.other.dialogue.parenthetical.fountain</string>
                <key>match</key>
-               <string>^\(.*\)$</string>
+               <string>^[ ]*\(.*\)$</string>
                <key>patterns</key>
                <array>
                   <dict>
@@ -195,6 +199,10 @@
                      <string>#nested_parens</string>
                   </dict>
                </array>
+            </dict>
+            <dict>
+               <key>include</key>
+               <string>#markup</string>
             </dict>
          </array>
       </dict>
@@ -344,6 +352,22 @@
                <key>name</key>
                <string>markup.italic.fountain</string>
                <key>begin</key>
+               <string>\*(?=.*(?&lt;!\\)\*)</string>
+               <key>end</key>
+               <string>\*</string>
+               <key>patterns</key>
+               <array>
+                  <dict>
+                     <key>include</key>
+                     <string>#markup</string>
+                  </dict>
+               </array>
+            </dict>
+
+            <dict>
+               <key>name</key>
+               <string>markup.italic.fountain</string>
+               <key>begin</key>
                <string>(?&lt;!\\)\*(?=(?&lt;!\\)\*)</string>
                <key>end</key>
                <string>(?&lt;! |\\)\*</string>
@@ -355,6 +379,21 @@
                   </dict>
                </array>
             </dict>
+
+           <dict>
+              <key>patterns</key>
+               <array>
+                  <dict>
+                     <key>include</key>
+                     <string>#notes</string>
+                  </dict>
+                  <dict>
+                     <key>include</key>
+                     <string>#comments</string>
+                  </dict>
+               </array>
+           </dict>
+
          </array>
       </dict>
 
@@ -363,9 +402,9 @@
       <key>title_page</key>
       <dict>
          <key>begin</key>
-         <string>^(?i)(title|credit|authors?|source|draft date|contact):</string>
+         <string>^(?i)(title|credit|authors?|source|draft date|contact|copyright|notes):</string>
          <key>end</key>
-         <string>^(?=(?i)(title|credit|authors?|source|draft date|contact)|$)</string>
+         <string>^(?=(?i)(title|credit|authors?|source|draft date|contact|copyright|notes)|$)</string>
          <key>beginCaptures</key>
          <dict>
             <key>1</key>
