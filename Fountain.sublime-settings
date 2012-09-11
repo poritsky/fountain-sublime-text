@@ -3,13 +3,13 @@
 	[
 	"fountain"
 	],
-	"font_face": "Courier Final Draft",
-	// "font_face": "Courier New",
-	// "font_face": "Courier",
+	"font_face": "Courier",
+	// "font_face": "Courier Screenplay",
+	// "font_face": "Courier Final Draft",
 	"font_size": 15,
 	"color_scheme": "Packages/Fountain/Fountain Classic.tmTheme",
 	"word_wrap": true,
-	"wrap_width": 70,
+	"wrap_width": 61,
 	"line_padding_top": 5,
 	"draw_centered": true,
   "spell_check": true,
