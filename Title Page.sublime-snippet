@@ -11,5 +11,5 @@ Contact:
 	Phone}
 ]]></content>
 	<tabTrigger>fountain</tabTrigger>
-	<scope>text.fountain</scope>
+	<scope>text.source.fountain</scope>
 </snippet>

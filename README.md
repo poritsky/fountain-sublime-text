@@ -34,11 +34,31 @@ Fountain for Sublime Text adds syntax highlighting when editing `.fountain` docu
 
 Note that `Fountain.tmlanguage` supports much more of the syntax, but `Fountain Classic.tmTheme` only calls on the elements listed above using their custom scopes.
 
+## Keyboard Shortcuts ##
+
+There are a few included keyboard shortcuts to make writing your script easier.
+
+* `*`, `**`, `(` and `[` - Wrap selected text with asterisks (single for italics, double for bold) parentheses or brackets as needed.
+* ^⌘n (control + command + n) - Note: If triggered with nothing selected will start a new Fountain formatted note (`[[This is a note.]]`). If triggered on selected text it will wrap it with double brakcets as a Fountain note.
+* ^/ (control + /) - Boneyard: If triggered with nothing selected will start a new Fountain Boneyard section (`/*This is the boneyard*/`). If triggered on selected text it will wrap it in Boneyard formatting.
+
+## Snippets ##
+
+The current Fountain for Sublime Text package includes three snippets of varying usefulness. All are triggered from the Sublime Text's Command Pallette (⌘⇧P) by searching for them by name.
+
+* **Title Page**: Creates a stock title page according to the Fountain syntax. Hitting `tab` after filling out each line will move the cursor to the following line.
+* **Save the Cat**: An outline in Fountain format based on Blake Snyder's [book of the same name](http://amzn.to/UMpfWi).
+* **int**: Creates an interior scene heading with the cursor placed just after "INT.". Pressing `tab` will move the cursor past the hyphen to fill out the scene's time (DAY, NIGHT, etc.). (Honestly you're better off just typing out your scene heading.)
+
 ## Customizations ##
 
-The `Fountain.sublime-settings` files contains a number of customizations to make Sublime Text 2 a bit more writer friendly. It also defaults to using `Fountain Classic.tmTheme` for syntax highlighting. This is a take on the included `Mac Classic` theme but using Fountain specific scopes. This isn't the most elegant solution, but it works for now.
+The `Fountain.sublime-settings` files contains a number of customizations to make Sublime Text 2 a bit more writer friendly.
 
-In general Color Schemes will need to be customized with Fountain specific scopes which is why I'm including this relatively bare theme.
+Currently it defaults to `Fountain Byworded Light.tmTheme` for syntax highlighting. This is a customized version of Philip Belesky's excellent ["Byworded" theme](https://github.com/philipbelesky/Byworded), itself based on the colors found in [Byword](http://bywordapp.com), a Mac OS X Text Editor. `Fountain Byworded Dark.tmtheme` is also included as a light on dark option.
+
+The package also includes a custom version of the `Mac Classic` theme called `Fountain Classic.tmtheme` and Chris Kempson's Tomorrow night theme (`Fountain Tomorrow Night.tmtheme`).
+
+In general Color Schemes will need to be customized with Fountain specific scopes. Use the provided themes as a guide for making your own.
 
 ## What Doesn't Work? ##
 
@@ -52,31 +72,8 @@ I spent about a day playing around with this to get the ball rolling, and I will
 
 ![Sample Image][img]
 
-[img]: https://raw.github.com/poritsky/fountain-sublime-text/master/img/sample.png
+[img]: http://f.cl.ly/items/272K2Z3l1m1V441c0p1b/Screen%20Shot%202012-11-16%20at%205.22.29%20PM.png
 
 ## Thanks ##
 
-[John August](http://johnaugust.com/about) and [Stu Maschwitz](http://prolost.com/about/) jointly came up with Fountain and help maintain it. [Brett Terpstra](http://brettterpstra.com/about/)'s [MarkdownEditing](http://ttscoff.github.com/MarkdownEditing/) project served as the basis for how to customize ST2 for a specific syntax. [Oliver Taylor](http://olivertaylor.net)'s now deprecated Screenbundle TextMate Bundle was an inspiration for getting this off the ground.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[John August](http://johnaugust.com/about) and [Stu Maschwitz](http://prolost.com/about/) jointly came up with Fountain and help maintain it. [Brett Terpstra](http://brettterpstra.com/about/)'s [MarkdownEditing](http://ttscoff.github.com/MarkdownEditing/) project served as the basis for how to customize ST2 for a specific syntax. And Brett's code for providing keyboard shortcuts to wrap code around text is used to wrap selected text in Notes and Boneyward blocks. [Oliver Taylor](http://olivertaylor.net)'s now deprecated Screenbundle TextMate Bundle was an inspiration for getting this off the ground.

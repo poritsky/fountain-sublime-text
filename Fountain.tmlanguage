@@ -53,6 +53,10 @@
          <key>include</key>
          <string>#sections</string>
       </dict>
+      <dict>
+         <key>include</key>
+         <string>#synopses</string>
+      </dict>
 
       /* Transitions */
       <dict>
@@ -276,25 +280,54 @@
       /* Sections and synopses */
       <key>sections</key>
       <dict>
+         <key>begin</key>
+         <string>\G(#{1,6})(?!#)\s*(?=\S)</string>
+         <key>captures</key>
+         <dict>
+            <key>1</key>
+            <dict>
+               <key>name</key>
+               <string>punctuation.definition.section.fountain</string>
+            </dict>
+         </dict>
+         <key>contentName</key>
+         <string>entity.name.section.fountain</string>
+         <key>end</key>
+         <string>\s*(#*)$\n?</string>
+         <key>name</key>
+         <string>markup.section.fountain</string>
          <key>patterns</key>
          <array>
             <dict>
-               <key>name</key>
-               <string>entity.name.section.fountain</string>
-               <key>match</key>
-               <string>^#.*$</string>
-            </dict>
-
-            <dict>
-               <key>name</key>
-               <string>entity.name.synopsis.fountain</string>
-               <key>match</key>
-               <string>^=.*$</string>
+               <key>include</key>
+               <string>#inline</string>
             </dict>
          </array>
       </dict>
-
-
+      <key>synopses</key>
+      <dict>
+         <key>begin</key>
+         <string>\G(={1,6})(?!=)\s*(?=\S)</string>
+         <key>captures</key>
+         <dict>
+            <key>1</key>
+            <dict>
+               <key>name</key>
+               <string>punctuation.definition.synopsis.fountain</string>
+            </dict>
+         </dict>
+         <key>end</key>
+         <string>\s*(=*)$\n?</string>
+         <key>name</key>
+         <string>markup.synopsis.fountain</string>
+         <key>patterns</key>
+         <array>
+            <dict>
+               <key>include</key>
+               <string>#inline</string>
+            </dict>
+         </array>
+      </dict>
       /* Text markup */
       <key>markup</key>
       <dict>

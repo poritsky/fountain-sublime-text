@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>author</key>
+	<string>Jonathan Poritsky</string>
+	<key>name</key>
+	<string>Fountain Classic</string>
+	<key>scope</key>
+	<string>text.html.markdown.fountain</string>
+	<key>settings</key>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#F2F2F2</string>
+				<key>caret</key>
+				<string>#3C3C3C</string>
+				<key>foreground</key>
+				<string>#3C3C3C</string>
+				<key>invisibles</key>
+				<string>#BFBFBF</string>
+				<key>lineHighlight</key>
+				<string>#303131</string>
+				<key>selection</key>
+				<string>#B5D5FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Fountain Structural Elements</string>
+			<key>scope</key>
+			<string>punctuation.definition.bold.markdown, punctuation.definition.italic.markdown, punctuation.definition.section.fountain, punctuation.definition.blockquote.markdown, punctuation.definition.metadata.markdown, punctuation.definition.list_item.markdown</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#B9B9B9</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>name</key>
+            <string>Title Page Sections</string>
+            <key>scope</key>
+            <string>keyword.other.title-page.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>bold</string>
+                <key>foreground</key>
+                <string>#3C3C3C</string>
+            </dict>
+        </dict>
+       <dict>
+            <key>name</key>
+            <string>Title Page Content</string>
+            <key>scope</key>
+            <string>string.other.title-page.fountain </string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>italic</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Sections</string>
+            <key>scope</key>
+            <string>entity.name.section.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#3C3C3C</string>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Sections</string>
+            <key>scope</key>
+            <string>punctuation.definition.synopsis.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#B9B9B9</string>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>
+		<dict>
+            <key>name</key>
+            <string>Sections</string>
+            <key>scope</key>
+            <string>entity.name.synopsis.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#787878</string>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>        <dict>
+            <key>name</key>
+            <string>Scene Headings</string>
+            <key>scope</key>
+            <string>keyword.other.heading.scene.fountain, entity.name.heading.scene.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Characters</string>
+            <key>scope</key>
+            <string>entity.name.character.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#5F5F81</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Parenthtical</string>
+            <key>scope</key>
+            <string>string.other.dialogue.parenthetical.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#526F75</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Transitions</string>
+            <key>scope</key>
+            <string>entity.other.transition.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#2B402C</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Notes</string>
+            <key>scope</key>
+            <string>entity.other.note.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>background</key>
+                <string>#EFECD7</string>
+                <key>foreground</key>
+                <string>#847833</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Boneyard</string>
+            <key>scope</key>
+            <string>comment.block.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#852E2E</string>
+                <key>background</key>
+                <string>#EFE1E1</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Bold Text</string>
+            <key>scope</key>
+            <string>markup.bold.markdown, markup.bold.fountain</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Italic Text</string>
+            <key>scope</key>
+            <string>markup.italic.fountain, markup.italic.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>italic</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Underline Text</string>
+            <key>scope</key>
+            <string>markup.underline.fountain, markup.underline.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>underline</string>
+            </dict>
+        </dict>
+		<dict>
+			<key>name</key>
+			<string>Comment</string>
+			<key>scope</key>
+			<string>comment</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>String</string>
+			<key>scope</key>
+			<string>string</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Number</string>
+			<key>scope</key>
+			<string>constant.numeric</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Built-in constant</string>
+			<key>scope</key>
+			<string>constant.language</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>User-defined constant</string>
+			<key>scope</key>
+			<string>constant.character, constant.other</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable</string>
+			<key>scope</key>
+			<string>variable.language, variable.other</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keyword</string>
+			<key>scope</key>
+			<string>keyword</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Storage</string>
+			<key>scope</key>
+			<string>storage</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Class name</string>
+			<key>scope</key>
+			<string>entity.name.class</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Inherited class</string>
+			<key>scope</key>
+			<string>entity.other.inherited-class</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function name</string>
+			<key>scope</key>
+			<string>entity.name.function</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function argument</string>
+			<key>scope</key>
+			<string>variable.parameter</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tag name</string>
+			<key>scope</key>
+			<string>entity.name.tag</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tag attribute</string>
+			<key>scope</key>
+			<string>entity.other.attribute-name</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Library function</string>
+			<key>scope</key>
+			<string>support.function</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Library constant</string>
+			<key>scope</key>
+			<string>support.constant</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Library class/type</string>
+			<key>scope</key>
+			<string>support.type, support.class</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Library variable</string>
+			<key>scope</key>
+			<string>support.other.variable</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Invalid</string>
+			<key>scope</key>
+			<string>invalid</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+	</array>
+	<key>uuid</key>
+	<string>C26632B3-F72D-41B5-938A-3617FAD5EBCD</string>
+</dict>
+</plist>
