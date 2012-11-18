@@ -369,15 +369,73 @@
                <key>name</key>
                <string>markup.bold.fountain</string>
                <key>begin</key>
-               <string>\*\*(?=.*(?&lt;!\\)\*\*)</string>
+               <string>(?x)
+                  (\*\*|__)(?=\S)                        # Open
+                  (?=
+                     (
+                         &lt;[^&gt;]*+&gt;                     # HTML tags
+                       | (?&lt;raw&gt;`+)([^`]|(?!(?&lt;!`)\k&lt;raw&gt;(?!`))`)*+\k&lt;raw&gt;
+                                                   # Raw
+                       | \\[\\`*_{}\[\]()#.!+\-&gt;]?+         # Escapes
+                       | \[
+                        (           
+                                (?&lt;square&gt;               # Named group
+                                 [^\[\]\\]            # Match most chars
+                                  | \\.                  # Escaped chars
+                                  | \[ \g&lt;square&gt;*+ \]      # Nested brackets
+                                )*+
+                           \]
+                           (
+                              (                    # Reference Link
+                                 [ ]?              # Optional space
+                                 \[[^\]]*+\]          # Ref name
+                              )
+                             | (                   # Inline Link
+                                 \(                # Opening paren
+                                    [ \t]*+           # Optional whtiespace
+                                    &lt;?(.*?)&gt;?         # URL
+                                    [ \t]*+           # Optional whtiespace
+                                    (              # Optional Title
+                                       (?&lt;title&gt;['"])
+                                       (.*?)
+                                       \k&lt;title&gt;
+                                    )?
+                                 \)
+                              )
+                           )
+                        )
+                       | (?!(?&lt;=\S)\1).                  # Everything besides
+                                                   # style closer
+                     )++
+                     (?&lt;=\S)\1                        # Close
+                  )</string>
+               <key>captures</key>
+               <dict>
+                  <key>1</key>
+                  <dict>
+                     <key>name</key>
+                     <string>punctuation.definition.markup.bold.fountain</string>
+                  </dict>
+               </dict>
                <key>end</key>
-               <string>\*\*</string>
+               <string>(?&lt;=\S)(\1)</string>
+               <key>patterns</key>
+               <array>
+            <dict>
+               <key>applyEndPatternLast</key>
+               <integer>1</integer>
+               <key>begin</key>
+               <string>(?=&lt;[^&gt;]*?&gt;)</string>
+               <key>end</key>
+               <string>(?&lt;=&gt;)</string>
                <key>patterns</key>
                <array>
                   <dict>
                      <key>include</key>
-                     <string>#markup</string>
+                     <string>text.html.basic</string>
                   </dict>
+               </array>
+            </dict>
                </array>
             </dict>
 
@@ -385,25 +443,58 @@
                <key>name</key>
                <string>markup.italic.fountain</string>
                <key>begin</key>
-               <string>\*(?=.*(?&lt;!\\)\*)</string>
-               <key>end</key>
-               <string>\*</string>
-               <key>patterns</key>
-               <array>
+               <string>(?x)
+                  (\*|_)(?=\S)                        # Open
+                  (?=
+                     (
+                         &lt;[^&gt;]*+&gt;                     # HTML tags
+                       | (?&lt;raw&gt;`+)([^`]|(?!(?&lt;!`)\k&lt;raw&gt;(?!`))`)*+\k&lt;raw&gt;
+                                                   # Raw
+                       | \\[\\`*_{}\[\]()#.!+\-&gt;]?+         # Escapes
+                       | \[
+                        (           
+                                (?&lt;square&gt;               # Named group
+                                 [^\[\]\\]            # Match most chars
+                                  | \\.                  # Escaped chars
+                                  | \[ \g&lt;square&gt;*+ \]      # Nested brackets
+                                )*+
+                           \]
+                           (
+                              (                    # Reference Link
+                                 [ ]?              # Optional space
+                                 \[[^\]]*+\]          # Ref name
+                              )
+                             | (                   # Inline Link
+                                 \(                # Opening paren
+                                    [ \t]*+           # Optional whtiespace
+                                    &lt;?(.*?)&gt;?         # URL
+                                    [ \t]*+           # Optional whtiespace
+                                    (              # Optional Title
+                                       (?&lt;title&gt;['"])
+                                       (.*?)
+                                       \k&lt;title&gt;
+                                    )?
+                                 \)
+                              )
+                           )
+                        )
+                       | \1\1                      # Must be bold closer
+                       | (?!(?&lt;=\S)\1).                  # Everything besides
+                                                   # style closer
+                     )++
+                     (?&lt;=\S)\1                        # Close
+                  )
+               </string>
+               <key>captures</key>
                   <dict>
-                     <key>include</key>
-                     <string>#markup</string>
+                     <key>1</key>
+                     <dict>
+                     <key>name</key>
+                     <string>punctuation.definition.markup.italic.fountain</string>
+                     </dict>
                   </dict>
-               </array>
-            </dict>
-
-            <dict>
-               <key>name</key>
-               <string>markup.italic.fountain</string>
-               <key>begin</key>
-               <string>(?&lt;!\\)\*(?=(?&lt;!\\)\*)</string>
                <key>end</key>
-               <string>(?&lt;! |\\)\*</string>
+               <string>(?&lt;=\S)(\1)((?!\1)|(?=\1\1))</string>
                <key>patterns</key>
                <array>
                   <dict>

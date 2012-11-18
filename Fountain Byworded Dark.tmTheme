@@ -31,7 +31,7 @@
 			<key>name</key>
 			<string>Fountain Structural Elements</string>
 			<key>scope</key>
-			<string>punctuation.definition.bold.markdown, punctuation.definition.italic.markdown, punctuation.definition.section.fountain, punctuation.definition.blockquote.markdown, punctuation.definition.metadata.markdown, punctuation.definition.list_item.markdown</string>
+			<string>punctuation.definition.markup.bold.fountain, punctuation.definition.markup.italic.fountain, punctuation.definition.section.fountain, punctuation.definition.blockquote.markdown, punctuation.definition.metadata.markdown, punctuation.definition.list_item.markdown</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
