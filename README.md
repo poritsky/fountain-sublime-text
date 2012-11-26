@@ -12,6 +12,15 @@ Fountain is supported by a [growing list of apps](http://fountain.io/apps). Synt
 
 ## Installation ##
 
+### Method 1: Package Control ###
+
+1. Install [Package Control](http://wbond.net/sublime_packages/package_control/installation).
+2. Select `Package Control: Install Package` from the Command Palette (⇧⌘P).
+3. Select Fountain.
+4. Write the next *Full Metal Jacket*.
+
+### Method 2: Download ###
+
 1. Download and unzip this repo.
 2. Rename folder to `Fountain` and move to `~/Library/Application Support/Sublime Text 2/Packages`.
 3. Restart Sublime Text 2.
