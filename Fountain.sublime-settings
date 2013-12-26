@@ -1,26 +1,23 @@
 {
-	"extensions":
-	[
-	"fountain"
-	],
+	"extensions":["fountain"],
 	"font_face": "Courier",
 	// "font_face": "Courier Screenplay",
 	// "font_face": "Courier Final Draft",
-	"font_size": 15,
+	// "font_face": "Courier Prime"
+	"font_size": 12,
 	"color_scheme": "Packages/Fountain/Fountain Byworded Light.tmTheme",
 	// "color_scheme": "Packages/Fountain/Fountain Byworded Dark.tmTheme",
 	// "color_scheme": "Packages/Fountain/Fountain Classic.tmTheme",
 	// "color_scheme": "Packages/Fountain/Fountain Tomorrow Night.tmTheme",
 	"word_wrap": true,
 	"wrap_width": 61,
-	"line_padding_top": 5,
-    "highlight_line": false,
-    "draw_centered": true,
-    "spell_check": false,
-    "indent_subsequent_lines": false,
-    "trim_automatic_white_space": true,
-    "line_numbers": false,
-    "translate_tabs_to_spaces": true,
-    "auto_complete_commit_on_tab": true,
-    "auto_complete_with_fields": true
+	"line_padding_top": 2,
+	"highlight_line": false,
+	"draw_centered": true,
+	"spell_check": false,
+	"indent_subsequent_lines": false,
+	"trim_automatic_white_space": true,
+	"line_numbers": false,
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_with_fields": true
 }
