@@ -22,9 +22,10 @@ Fountain is supported by a [growing list of apps](http://fountain.io/apps). Synt
 ### Method 2: Download ###
 
 1. Download and unzip this repo.
-2. Rename folder to `Fountain` and move to `~/Library/Application Support/Sublime Text 2/Packages`.
-3. Restart Sublime Text 2.
-4. Write the next *Chinatown*.
+2. Zip the files inside the folder
+3. Rename the zip to `Fountain.sublime-package` and move it to `~/Library/Application Support/Sublime Text 3/Installed Packages`.
+4. Restart Sublime Text 3.
+5. Write the next *Chinatown*.
 
 ### Notes ###
 
@@ -41,15 +42,15 @@ Fountain for Sublime Text adds syntax highlighting when editing `.fountain` docu
 * Parentheticals
 * Transitions
 
-Note that `Fountain.tmlanguage` supports much more of the syntax, but `Fountain Classic.tmTheme` only calls on the elements listed above using their custom scopes.
+Note that `Fountain.tmLanguage` supports much more of the syntax, but `Fountain Classic.tmTheme` only calls on the elements listed above using their custom scopes.
 
 ## Keyboard Shortcuts ##
 
 There are a few included keyboard shortcuts to make writing your script easier.
 
 * `*`, `**`, `(` and `[` - Wrap selected text with asterisks (single for italics, double for bold) parentheses or brackets as needed.
-* ^⌘n (control + command + n) - Note: If triggered with nothing selected will start a new Fountain formatted note (`[[This is a note.]]`). If triggered on selected text it will wrap it with double brakcets as a Fountain note.
-* ^/ (control + /) - Boneyard: If triggered with nothing selected will start a new Fountain Boneyard section (`/*This is the boneyard*/`). If triggered on selected text it will wrap it in Boneyard formatting.
+* `^⌘n` (control + command + n) - Note: If triggered with nothing selected will start a new Fountain formatted note (`[[This is a note.]]`). If triggered on selected text it will wrap it with double brakcets as a Fountain note.
+* `^/` (control + /) - Boneyard: If triggered with nothing selected will start a new Fountain Boneyard section (`/*This is the boneyard*/`). If triggered on selected text it will wrap it in Boneyard formatting.
 
 ## Snippets ##
 
@@ -68,10 +69,6 @@ Currently it defaults to `Fountain Byworded Light.tmTheme` for syntax highlighti
 The package also includes a custom version of the `Mac Classic` theme called `Fountain Classic.tmtheme` and Chris Kempson's Tomorrow night theme (`Fountain Tomorrow Night.tmtheme`).
 
 In general Color Schemes will need to be customized with Fountain specific scopes. Use the provided themes as a guide for making your own.
-
-## What Doesn't Work? ##
-
-The Fountain syntax supports indentations, but this theme does not support tab-indented character lines. (Space indents work fine, and `Fountain.sublime-settings` contains a line turning tabs to spaces.) If you, for example, tab indent characters and dialogue, they will not be highlighted. This has no effect when converting your document with other software, such as [Highland](http://quoteunquoteapps.com/highland/).
 
 ## Help, Please ##
 
