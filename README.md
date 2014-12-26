@@ -23,7 +23,9 @@ Fountain is supported by a [growing list of apps](http://fountain.io/apps). Synt
 
 1. Download and unzip this repo.
 2. Zip the files inside the folder
-3. Rename the zip to `Fountain.sublime-package` and move it to `~/Library/Application Support/Sublime Text 3/Installed Packages`.
+3. Rename the zip to `Fountain.sublime-package` and move it to:
+	- On Mac OSX: `~/Library/Application Support/Sublime Text 3/Installed Packages`.
+	- On Linux (Ubuntu): `~/.config/sublime-text-3/Installed Packages`.
 4. Restart Sublime Text 3.
 5. Write the next *Chinatown*.
 
