@@ -133,7 +133,7 @@
          <key>begin</key>
          <string>/\*</string>
          <key>end</key>
-         <string>\--></string>
+         <string>\*/</string>
       </dict>
 
       <!-- Characters -->
